@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+  --green: #27ae60;
+  --dark-color: #219150;
+  --black: #444;
+  --light-color: #666;
+  --border: .1rem solid rgba(0, 0, 0, .1);
+  --border-hover: .1rem solid var(--black);
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  transition: width none;
+}
+
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+.wrap {
+  width: 75%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 5% 0;
+  margin-bottom: 5em;
+}
+
+.projTitle {
+  text-align: center;
+  font-size: 2em;
+  padding: 1em 0;
+  border-bottom: 2px solid #dadada;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.projTitle span {
+  font-weight: normal;
+  text-transform: lowercase;
+  color: #777;
+}
+
+.heading {
+  padding: 1em 0;
+  border-bottom: 2px solid #D0D0D0;
+}
+.heading h1 {
+  font-size: 3em;
+  float: left;
+}
+.heading a.continue:link, .heading a.continue:visited {
+  text-decoration: none;
+  font-size: 1em;
+  padding: 1em;
+  color: #fff;
+  background: var(--green);
+  border-radius: 50px;
+  float: right;
+  text-align: right;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+.heading a.continue:after {
+  content: "\276f";
+  padding: 1em;
+  position: relative;
+  right: 0;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.heading a.continue:hover, .heading a.continue:focus, .heading a.continue:active {
+  background: #f69679;
+}
+.heading a.continue:hover:after, .heading a.continue:focus:after, .heading a.continue:active:after {
+  right: -10px;
+}
+
+.tableHead {
+  display: table;
+  width: 100%;
+  font-size: .75em;
+}
+.tableHead li {
+  display: table-cell;
+  padding: 1em 0;
+  text-align: center;
+}
+.tableHead li.prodHeader {
+  text-align: left;
+}
+
+.cart {
+  padding: 1em 0;
+}
+.cart .items {
+  display: block;
+  width: 100%;
+  /* vertical-align: middle; */
+  padding: 1.5em;
+  border-bottom: 1px solid #fafafa;
+  margin-bottom: 1rem;
+}
+.cart .items.even {
+  background:antiquewhite;
+}
+.cart .items .infoWrap {
+  display: table;
+  width: 100%;
+}
+.cart .items .cartSection {
+  display: table-cell;
+  vertical-align: middle;
+}
+.cart .items .cartSection .itemNumber {
+  font-size: .75em;
+  color: #777;
+  margin-bottom: .5em;
+}
+.cart .items .cartSection h3 {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.cart .items .cartSection p {
+  display: inline-block;
+  font-size: .85em;
+  color: #777777;
+
+}
+.cart .items .cartSection .itemImg {
+  width: 4em;
+  float: left;
+}
+.cart .items .cartSection .itemImg {
+  width: 8em;
+  display: inline;
+  padding-right: 1em;
+}
+a.remove {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background: #e0e0e0;
+  padding: .5em;
+  font-size: .1em;
+  display: inline-block;
+  border-radius: 100%;
+  line-height: .85;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+a.remove:hover {
+  background: #f30;
+}
+/* CSS for cart container */
+.cart-container {
+  /* Same styles as login form container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, .9); /* Set background color with transparency */
+  position: fixed;
+  top: -100%; /* Initially hidden above the viewport */
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  transition: top 1s ease, background-color 0.5s ease; /* Apply transition effect to top and background-color properties */
+}
+
+.cart-container.active {
+  top: 0; /* Slide down into view when active */
+  background: rgb(132, 166, 132);/* Change background color when active */
+}
+.cart-container form {
+  /* Same styles as login form */
+}
+
+.form-container #close-cart-btn {
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  filter: grayscale();
+}
+
+.buy {
+  font-size: 1.5rem;
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  padding: 1.5rem 3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 20px; /* Adjust the gap as needed */
+  margin-left: 85%; /* Aligns button to the right */
+}
+
+.buy:hover {
+  background-color: var(--dark-color);
+}
